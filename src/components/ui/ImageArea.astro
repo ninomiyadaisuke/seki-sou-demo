@@ -1,5 +1,5 @@
 ---
-import { Picture } from 'astro:assets';
+import { Image, Picture } from 'astro:assets';
 
 type Props = {
 	objectFit?: 'contain' | 'cover' | 'fill' | 'none' | 'scale-down';
@@ -19,6 +19,12 @@ const { objectFit = 'cover', loading = 'lazy' } = Astro.props;
 		width={300}
 		class={objectFit}
 		alt="My super image in multiple formats!"
+	/>
+	<Image
+		src={'/images/top/merchandise/jpg/home_main_1_1@2x.jpg'}
+		height="300"
+		width="300"
+		alt={''}
 	/>
 </div>
 
