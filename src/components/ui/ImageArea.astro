@@ -1,5 +1,5 @@
 ---
-import { Image, Picture } from 'astro:assets';
+import { Picture } from 'astro:assets';
 
 type Props = {
 	objectFit?: 'contain' | 'cover' | 'fill' | 'none' | 'scale-down';
@@ -12,19 +12,74 @@ const { objectFit = 'cover', loading = 'lazy' } = Astro.props;
 
 <div class={`picture`}>
 	<Picture
-		src={'/images/top/merchandise/jpg/home_main_1_1@2x.jpg'}
-		formats={['jpg', 'webp']}
+		src={'/images/top/merchandise/webp/home_main_1_1@2x.webp'}
+		srcset={'/images/top/merchandise/jpg/home_main_1_1@2x.jpg'}
+		formats={['webp', 'jpg']}
 		loading={loading}
 		height={300}
 		width={300}
 		class={objectFit}
 		alt="My super image in multiple formats!"
 	/>
-	<Image
-		src={'/images/top/merchandise/jpg/home_main_1_1@2x.jpg'}
-		height="300"
-		width="300"
-		alt={''}
+	<Picture
+		src={'/images/top/merchandise/webp/home_main_1_1@2x.webp'}
+		srcset={'/images/top/merchandise/jpg/home_main_1_1@2x.jpg'}
+		formats={['webp', 'jpg']}
+		loading={loading}
+		height={300}
+		width={300}
+		class={objectFit}
+		alt="My super image in multiple formats!"
+	/>
+	<Picture
+		src={'/images/top/merchandise/webp/home_main_1_1@2x.webp'}
+		srcset={'/images/top/merchandise/jpg/home_main_1_1@2x.jpg'}
+		formats={['webp', 'jpg']}
+		loading={loading}
+		height={300}
+		width={300}
+		class={objectFit}
+		alt="My super image in multiple formats!"
+	/>
+	<Picture
+		src={'/images/top/merchandise/webp/home_main_1_1@2x.webp'}
+		srcset={'/images/top/merchandise/jpg/home_main_1_1@2x.jpg'}
+		formats={['webp', 'jpg']}
+		loading={loading}
+		height={300}
+		width={300}
+		class={objectFit}
+		alt="My super image in multiple formats!"
+	/>
+	<Picture
+		src={'/images/top/merchandise/webp/home_main_1_1@2x.webp'}
+		srcset={'/images/top/merchandise/jpg/home_main_1_1@2x.jpg'}
+		formats={['webp', 'jpg']}
+		loading={loading}
+		height={300}
+		width={300}
+		class={objectFit}
+		alt="My super image in multiple formats!"
+	/>
+	<Picture
+		src={'/images/top/merchandise/webp/home_main_1_1@2x.webp'}
+		srcset={'/images/top/merchandise/jpg/home_main_1_1@2x.jpg'}
+		formats={['webp', 'jpg']}
+		loading={loading}
+		height={300}
+		width={300}
+		class={objectFit}
+		alt="My super image in multiple formats!"
+	/>
+	<Picture
+		src={'/images/top/merchandise/webp/home_main_1_1@2x.webp'}
+		srcset={'/images/top/merchandise/jpg/home_main_1_1@2x.jpg'}
+		formats={['webp', 'jpg']}
+		loading={loading}
+		height={300}
+		width={300}
+		class={objectFit}
+		alt="My super image in multiple formats!"
 	/>
 </div>
 
