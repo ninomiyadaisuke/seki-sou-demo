@@ -4,7 +4,15 @@ import { Image } from 'astro:assets';
 ---
 
 <div class="test">
-	<Image src={TestImage} alt="test" height={TestImage.height} width={TestImage.width} />
+	test
+	<Image
+		src={TestImage}
+		alt="test"
+		height={TestImage.height}
+		width={TestImage.width}
+		loading="eager"
+		decoding="sync"
+	/>
 </div>
 
 <style lang="scss">
