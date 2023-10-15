@@ -1,5 +1,14 @@
 ---
-
+import TestImage from '@assets/images/top/merchandise/webp/home_main_1_1.webp';
+import { Image } from 'astro:assets';
 ---
 
-<div>top template</div>
+<div class="test">
+	<Image src={TestImage} alt="test" height={TestImage.height} width={TestImage.width} />
+</div>
+
+<style lang="scss">
+	.test {
+		max-width: 400px;
+	}
+</style>
