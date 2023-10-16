@@ -1,0 +1,18 @@
+---
+import TopImage12x from '@assets/images/top/merchandise/2x/home_main_1_1@2x.jpg';
+import { Image } from 'astro:assets';
+---
+
+<section>
+	<div class="image">
+		<Image src={TopImage12x} alt="top image" widths={[400, TopImage12x.width]} />
+	</div>
+</section>
+
+<style lang="scss">
+	@import '@styles/main.scss';
+	.image {
+		max-width: 1000px;
+		margin: 0 auto;
+	}
+</style>
