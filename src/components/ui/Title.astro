@@ -1,0 +1,27 @@
+---
+type Props = {
+	title: string;
+};
+const { title } = Astro.props;
+---
+
+<h2 class="title">{title}</h2>
+
+<style lang="scss">
+	@import '@styles/main.scss';
+	.title {
+		position: relative;
+		font-size: 20px;
+		letter-spacing: 1.2px;
+		padding-left: 48px;
+		&::before {
+			position: absolute;
+			left: 0;
+			top: 60%;
+			content: '';
+			width: 30px;
+			height: 1px;
+			background-color: var(--gray-light-color);
+		}
+	}
+</style>
