@@ -1,0 +1,131 @@
+---
+import Logo from '@assets/images/logo/2x/logo@2x.png';
+import { Image } from 'astro:assets';
+---
+
+<header class="header">
+	<div class="header__container">
+		<div class="header__container_logo">
+			<a href="/">
+				<Image src={Logo} alt="logo" width={Logo.width} height={Logo.height} />
+			</a>
+		</div>
+		<div class="header__container_title">
+			Highly pure &
+			<span>Smooth happiness.</span>
+			<span>Intimate temperature Butter Sand.</span>
+		</div>
+	</div>
+	<div class="header__menu">
+		<button class="header__menu_button">
+			<span></span>
+			<p>menu</p>
+		</button>
+	</div>
+</header>
+
+<style lang="scss">
+	@import '@styles/main.scss';
+	.header {
+		position: relative;
+		&__container {
+			position: absolute;
+			top: 40px;
+			left: 40px;
+			&_logo {
+				width: 140px;
+			}
+			&_title {
+				margin-top: 32px;
+				font-size: 10px;
+				span {
+					display: block;
+				}
+			}
+		}
+		&__menu {
+			background-color: var(--white);
+			position: fixed;
+			width: 80px;
+			height: 80px;
+			top: 0;
+			right: 0;
+
+			&_button {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				position: relative;
+				width: 100%;
+				height: 100%;
+				&:hover {
+					transition: background-color 0.3s;
+					background-color: var(--gray-light-color);
+					span,
+					span::before,
+					span::after {
+						background-color: var(--white);
+					}
+				}
+				span {
+					position: absolute;
+					left: 50%;
+					transform: translateX(-50%);
+					display: block;
+					width: 30px;
+					height: 1px;
+					background-color: var(--gray-light-color);
+					&::before,
+					&::after {
+						position: absolute;
+						content: '';
+						top: -5px;
+						left: -10px;
+						width: 30px;
+						height: 1px;
+						background-color: var(--gray-light-color);
+					}
+					&::after {
+						top: -10px;
+						left: 50%;
+						transform: translateX(-50%);
+					}
+				}
+				p {
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					transform: translateX(-50%);
+				}
+			}
+			.open span {
+				background-color: transparent;
+			}
+			.open span::after {
+				top: -6px;
+				left: 0;
+				transform: rotate(45deg);
+				opacity: 1;
+			}
+			.open span::before {
+				top: -6px;
+				left: 0px;
+				transform: rotate(-45deg);
+				opacity: 1;
+			}
+		}
+		@include mq('md') {
+			&__container_logo {
+				width: 170px;
+			}
+		}
+	}
+</style>
+
+<script>
+	const button = document.querySelector('.header__menu_button');
+	function toggleHeaderPadding() {
+		button!.classList.toggle('open');
+	}
+	addEventListener('click', toggleHeaderPadding);
+</script>
