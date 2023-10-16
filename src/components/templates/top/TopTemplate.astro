@@ -1,5 +1,6 @@
 ---
-import TestImage from '@assets/images/top/merchandise/webp/home_main_1_1.webp';
+import TestImage from '@assets/images/top/merchandise/2x/home_main_1_1@2x.jpg';
+import TestImage2 from '@assets/images/top/merchandise/2x/home_main_1_2@2x.jpg';
 import { Image } from 'astro:assets';
 ---
 
@@ -10,6 +11,14 @@ import { Image } from 'astro:assets';
 		alt="test"
 		height={TestImage.height}
 		width={TestImage.width}
+		loading="eager"
+		decoding="sync"
+	/>
+	<Image
+		src={TestImage2}
+		alt="test"
+		height={TestImage2.height}
+		width={TestImage2.width}
 		loading="eager"
 		decoding="sync"
 	/>
