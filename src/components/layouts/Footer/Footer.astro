@@ -1,6 +1,6 @@
 ---
-import Logo from '@assets/images/logo/logo@2x.png';
-import { Image } from 'astro:assets';
+// import Logo from '@assets/images/logo/logo@2x.png';
+// import { Image } from 'astro:assets';
 // import { Icon } from 'astro-icon';
 
 const data = [
@@ -15,7 +15,7 @@ const data = [
 
 <footer class="footer">
 	<div class="footer__logo">
-		<Image src={Logo} alt="logo" width={Logo.width} height={Logo.height} />
+		<!-- <Image src={Logo} alt="logo" width={Logo.width} height={Logo.height} /> -->
 	</div>
 	<nav>
 		<ul>
@@ -42,7 +42,6 @@ const data = [
 <style lang="scss">
 	@import '@styles/main.scss';
 	.footer {
-		height: 600px;
 		width: 100%;
 		background-color: var(--white);
 		padding: 20% 9.6%;
