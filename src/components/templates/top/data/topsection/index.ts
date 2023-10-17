@@ -19,51 +19,59 @@ type TImage = {
 
 export const imageData = [
 	{
-		src: TopImage1,
+		src: TopImage1, //width 800
 		alt: 'TopImage1',
 		loading: 'eager',
-		decoding: 'sync'
+		decoding: 'sync',
+		sizes: '64vw, 31vw'
 	},
 	{
-		src: TopImage2,
+		src: TopImage2, // width 320
 		alt: 'TopImage2',
 		loading: 'eager',
-		decoding: 'sync'
+		decoding: 'sync',
+		sizes: '27vw, 12.5vw'
 	},
 	{
-		src: TopImage3,
+		src: TopImage3, // width 480
 		alt: 'TopImage3',
 		loading: 'eager',
-		decoding: 'sync'
+		decoding: 'sync',
+		sizes: '36vw, 18.8vw'
 	},
 	{
-		src: TopImage4,
+		src: TopImage4, // width 320
 		alt: 'TopImage4',
 		loading: 'eager',
-		decoding: 'sync'
+		decoding: 'sync',
+		sizes: '27vw, 12.5vw'
 	},
 	{
-		src: TopImage5,
+		src: TopImage5, // width 480
 		alt: 'TopImage5',
 		loading: 'eager',
-		decoding: 'sync'
+		decoding: 'sync',
+		sizes: '36vw, 18.8vw'
 	},
 	{
-		src: TopImage6,
+		src: TopImage6, // width 640
 		alt: 'TopImage6',
 		loading: 'eager',
-		decoding: 'sync'
+		decoding: 'sync',
+		sizes: '54vw, 25vw'
 	},
 	{
-		src: TopImage7,
+		src: TopImage7, // width 480
 		alt: 'TopImage7',
 		loading: 'eager',
-		decoding: 'sync'
+		decoding: 'sync',
+		sizes: '27vw, 12.5vw'
 	},
 	{
-		src: TopImage8,
+		src: TopImage8, // width 320
 		alt: 'TopImage8',
 		loading: 'eager',
-		decoding: 'sync'
+		decoding: 'sync',
+		sizes: '27vw, 12.5vw'
 	}
 ] satisfies TImage[];

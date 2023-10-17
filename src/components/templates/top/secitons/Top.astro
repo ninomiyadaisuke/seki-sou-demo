@@ -3,33 +3,79 @@ import { imageData } from '@components/templates/top/data/topsection';
 import ResponsiveImage from '@components/ui/ResponsiveImage.astro';
 ---
 
-<section>
-	<div class="image">
-		{
-			imageData.map(image => (
-				<div>
+<section class="top">
+	{
+		imageData.map((image, index) => {
+			return (
+				<div class={`top__image_${index + 1}`}>
 					<ResponsiveImage
 						src={image.src}
 						alt={image.alt}
+						sizes={image.sizes}
 						loading={image.loading}
 						decoding={image.decoding}
 					/>
 				</div>
-			))
-		}
-	</div>
+			);
+		})
+	}
 </section>
 
 <style lang="scss">
 	@import '@styles/main.scss';
-	section {
-		height: 100vh;
-	}
-	.image {
+	.top {
 		display: flex;
-		div {
-			max-width: 800px;
-			margin: 0 auto;
+		flex-wrap: wrap;
+		&__image_1 {
+			width: 64%;
+		}
+		&__image_2 {
+			display: none;
+		}
+		&__image_3 {
+			width: 36%;
+		}
+		&__image_4 {
+			width: 27%;
+		}
+		&__image_5 {
+			width: 36%;
+		}
+		&__image_6 {
+			width: 54%;
+		}
+		&__image_7 {
+			width: 27%;
+		}
+		&__image_8 {
+			width: 27%;
+		}
+		@include mq('md') {
+			&__image_1 {
+				width: 31%;
+			}
+			&__image_2 {
+				display: block;
+				width: 12.5%;
+			}
+			&__image_3 {
+				width: 18.8%;
+			}
+			&__image_4 {
+				width: 12.5%;
+			}
+			&__image_5 {
+				width: 18.8%;
+			}
+			&__image_6 {
+				width: 25%;
+			}
+			&__image_7 {
+				width: 12.5%;
+			}
+			&__image_8 {
+				width: 12.5%;
+			}
 		}
 	}
 </style>
