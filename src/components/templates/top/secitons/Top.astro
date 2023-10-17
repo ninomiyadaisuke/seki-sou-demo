@@ -1,18 +1,28 @@
 ---
-import TopImage12x from '@assets/images/top/home_main_1_1@2x.jpg';
-import { Image } from 'astro:assets';
+import { imageData } from '@components/templates/top/data/topsection';
+import ResponsiveImage from '@components/ui/ResponsiveImage.astro';
 ---
 
 <section>
 	<div class="image">
-		<Image src={TopImage12x} alt="top image" widths={[400, TopImage12x.width]} />
+		{
+			imageData.map(image => (
+				<div>
+					<ResponsiveImage
+						src={image.src}
+						alt={image.alt}
+						loading={image.loading}
+						decoding={image.decoding}
+					/>
+				</div>
+			))
+		}
 	</div>
 </section>
 
 <style lang="scss">
 	@import '@styles/main.scss';
 	.image {
-		max-width: 1000px;
-		margin: 0 auto;
+		display: flex;
 	}
 </style>
