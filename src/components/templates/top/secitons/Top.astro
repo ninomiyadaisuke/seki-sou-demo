@@ -1,11 +1,16 @@
 ---
-import TopImage12x from '@assets/images/top/home_main_1_1@2x.jpg';
-import { Image } from 'astro:assets';
+import TopImage1 from '@assets/images/top/home_main_1_1@2x.jpg';
+import ResponsiveImage from '@components/ui/ResponsiveImage.astro';
 ---
 
 <section>
 	<div class="image">
-		<Image src={TopImage12x} alt="top image" widths={[400, TopImage12x.width]} />
+		<ResponsiveImage
+			src={TopImage1}
+			alt="TopImage1"
+			sizes="100vw,1000px"
+			widths={[400]}
+		/>
 	</div>
 </section>
 
