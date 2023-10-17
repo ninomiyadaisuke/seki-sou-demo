@@ -22,8 +22,7 @@ export const imageData = [
 		src: TopImage1,
 		alt: 'TopImage1',
 		loading: 'eager',
-		decoding: 'sync',
-		sizes: '640px, 100vw'
+		decoding: 'sync'
 	},
 	{
 		src: TopImage2,
@@ -34,14 +33,12 @@ export const imageData = [
 	{
 		src: TopImage3,
 		alt: 'TopImage3',
-		sizes: '640px, 100vw',
 		loading: 'eager',
 		decoding: 'sync'
 	},
 	{
 		src: TopImage4,
 		alt: 'TopImage4',
-		sizes: '640px, 100vw',
 		loading: 'eager',
 		decoding: 'sync'
 	},
