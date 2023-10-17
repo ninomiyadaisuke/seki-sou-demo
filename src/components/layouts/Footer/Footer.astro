@@ -1,7 +1,7 @@
 ---
 import Logo from '@assets/images/logo/logo@2x.png';
 import { Image } from 'astro:assets';
-import { Icon } from 'astro-icon';
+// import { Icon } from 'astro-icon';
 
 const data = [
 	{ link: '/', title: 'オンラインショップ' },
@@ -30,7 +30,7 @@ const data = [
 	</nav>
 	<div class="footer__sns">
 		<a href="">
-			<Icon class="footer__sns_icon" pack="mdi" name="instagram" />
+			<!-- <Icon class="footer__sns_icon" pack="mdi" name="instagram" /> -->
 			<span>Instagram</span>
 		</a>
 	</div>
@@ -42,6 +42,7 @@ const data = [
 <style lang="scss">
 	@import '@styles/main.scss';
 	.footer {
+		height: auto;
 		width: 100%;
 		background-color: var(--white);
 		padding: 20% 9.6%;
