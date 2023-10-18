@@ -33,7 +33,11 @@ import ResponsiveImage from '@components/ui/ResponsiveImage.astro';
 		&__image_5,
 		&__image_6,
 		&__image_7,
-		&__image_8 {
+		&__image_8,
+		&__image_9,
+		&__image_10,
+		&__image_11,
+		&__image_12 {
 			position: absolute;
 			z-index: 1;
 		}
@@ -76,6 +80,24 @@ import ResponsiveImage from '@components/ui/ResponsiveImage.astro';
 			left: -12.5vw;
 			width: 27%;
 		}
+		&__image_9 {
+			width: 103.4666666667vw;
+			top: 74.6666666667vw;
+			left: -56.2666666667vw;
+		}
+		&__image_10 {
+			width: 114.1333333333vw;
+			top: 390vw;
+			left: 9.3333333333vw;
+		}
+		&__image_11 {
+			width: 101.6vw;
+			top: 117.8666666667vw;
+			left: 42.4vw;
+		}
+		&__image_12 {
+			display: none;
+		}
 		@include mq('md') {
 			height: 100vw;
 			&__image_1 {
@@ -102,7 +124,7 @@ import ResponsiveImage from '@components/ui/ResponsiveImage.astro';
 			}
 			&__image_5 {
 				top: 16.09375vw;
-				right: -7.03125vw;
+				left: calc(100% - 12vw);
 				width: 18.8%;
 			}
 			&__image_6 {
@@ -121,6 +143,31 @@ import ResponsiveImage from '@components/ui/ResponsiveImage.astro';
 				top: 87.03125vw;
 				left: 14.0625vw;
 				width: 12.5%;
+			}
+			//波１
+			&__image_9 {
+				top: 29.21875vw;
+				left: -1.328125vw;
+				width: 30%;
+			}
+			//波二
+			&__image_10 {
+				width: 33.4375vw;
+				top: 75.546875vw;
+				left: 16.875vw;
+			}
+			//波三
+			&__image_11 {
+				width: 29.765625vw;
+				top: 36.09375vw;
+				left: calc(100% - 26vw);
+			}
+			//波四
+			&__image_12 {
+				display: block;
+				width: 28.5%;
+				top: 99.765625vw;
+				left: 3.671875vw;
 			}
 		}
 	}
