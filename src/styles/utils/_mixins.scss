@@ -58,3 +58,21 @@ $__breakpoints: (
 		}
 	}
 }
+
+// フェードインアニメーションのmixin
+@mixin fadeIn {
+	opacity: 0; /* 最初は非表示 */
+	animation-name: fadeIn; /* フェードインのアニメーションを適用 */
+	animation-timing-function: ease-in;
+	animation-fill-mode: forwards; /* アニメーション終了後のスタイルを維持 */
+}
+
+// アニメーションのキーフレーム
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}

@@ -1,9 +1,28 @@
 ---
-import { imageData } from '@components/templates/top/data/topsection';
+import { imageData, namiImageData } from '@components/templates/top/data/topsection';
 import ResponsiveImage from '@components/ui/ResponsiveImage.astro';
 ---
 
 <section class="top">
+	<h1>
+		<p>
+			<span>純</span><span>度</span><span>の</span><span>高</span><span>い</span>
+		</p><p>
+			<span>な</span><span>め</span><span>ら</span><span>か</span><span>な</span><span
+			>し</span
+			><span>あ</span><span>わ</span><span>せ</span>
+		</p>
+		<p>
+			<span>親</span><span>密</span><span>な</span><span>温</span><span>度</span><span
+			>の</span
+			>
+		</p>
+		<p>
+			<span>バ</span><span>タ</span><span>ー</span><span>サ</span><span>ン</span><span
+			>ド</span
+			>
+		</p>
+	</h1>
 	{
 		imageData.map((image, index) => {
 			return (
@@ -19,6 +38,26 @@ import ResponsiveImage from '@components/ui/ResponsiveImage.astro';
 			);
 		})
 	}
+	{
+		namiImageData.map((image, index) => {
+			return (
+				<div class={`top__nami_${index + 1}`}>
+					<ResponsiveImage
+						src={image.src}
+						alt={image.alt}
+						loading={image.loading}
+						decoding={image.decoding}
+					/>
+				</div>
+			);
+		})
+	}
+	<div class="top__content">
+		<p><span>Sea,</span> <span>Forest &amp; City.</span></p>
+		<p><span>As it melts</span> <span>into the painting.</span></p>
+		<p><span>Butter Sand,</span></p>
+		<p><span>the destination</span> <span>of memory.</span></p>
+	</div>
 </section>
 
 <style lang="scss">
@@ -26,6 +65,33 @@ import ResponsiveImage from '@components/ui/ResponsiveImage.astro';
 	.top {
 		position: relative;
 		height: 413vw;
+		&__content {
+			position: absolute;
+			left: 12vw;
+			top: 380vw;
+			font-size: 4.2666666667vw;
+			width: auto;
+			height: auto;
+		}
+		h1 {
+			position: absolute;
+			right: 7.4666666667vw;
+			top: 150.9333333333vw;
+			font-size: 3.7333333333vw;
+			width: auto;
+			height: auto;
+			font-size: 3.7333333333vw;
+			writing-mode: vertical-rl;
+			line-height: 1.2;
+			p {
+				margin-left: 4.2vw;
+				&:nth-child(3),
+				&:nth-child(4) {
+					display: inline-block;
+					margin-left: 0;
+				}
+			}
+		}
 		&__image_1,
 		&__image_2,
 		&__image_3,
@@ -34,12 +100,13 @@ import ResponsiveImage from '@components/ui/ResponsiveImage.astro';
 		&__image_6,
 		&__image_7,
 		&__image_8,
-		&__image_9,
-		&__image_10,
-		&__image_11,
-		&__image_12 {
+		&__nami_1,
+		&__nami_2,
+		&__nami_3,
+		&__nami_4 {
 			position: absolute;
 			z-index: 1;
+			opacity: 0;
 		}
 		&__image_1 {
 			width: 64%;
@@ -80,26 +147,48 @@ import ResponsiveImage from '@components/ui/ResponsiveImage.astro';
 			left: -12.5vw;
 			width: 27%;
 		}
-		&__image_9 {
+
+		&__nami_1 {
 			width: 103.4666666667vw;
 			top: 74.6666666667vw;
 			left: -56.2666666667vw;
 		}
-		&__image_10 {
+		&__nami_2 {
 			width: 114.1333333333vw;
 			top: 390vw;
 			left: 9.3333333333vw;
 		}
-		&__image_11 {
+		&__nami_3 {
 			width: 101.6vw;
 			top: 117.8666666667vw;
 			left: 42.4vw;
 		}
-		&__image_12 {
+		&__nami_4 {
 			display: none;
+		}
+		.fade-in {
+			@include fadeIn;
 		}
 		@include mq('md') {
 			height: 100vw;
+			h1 {
+				font-size: 1.25vw;
+				right: 18.75vw;
+				top: 23.4375vw;
+				p {
+					margin-left: 2vw;
+					&:nth-child(3),
+					&:nth-child(4) {
+						display: block;
+						margin-left: 2vw;
+					}
+				}
+			}
+			&__content {
+				font-size: 1.5625vw;
+				left: 17.734375vw;
+				top: 72.265625vw;
+			}
 			&__image_1 {
 				top: 8.75vw;
 				left: calc(50% - 18vw);
@@ -144,26 +233,23 @@ import ResponsiveImage from '@components/ui/ResponsiveImage.astro';
 				left: 14.0625vw;
 				width: 12.5%;
 			}
-			//波１
-			&__image_9 {
+
+			&__nami_1 {
 				top: 29.21875vw;
 				left: -1.328125vw;
 				width: 30%;
 			}
-			//波二
-			&__image_10 {
+			&__nami_2 {
 				width: 33.4375vw;
 				top: 75.546875vw;
 				left: 16.875vw;
 			}
-			//波三
-			&__image_11 {
+			&__nami_3 {
 				width: 29.765625vw;
 				top: 36.09375vw;
 				left: calc(100% - 26vw);
 			}
-			//波四
-			&__image_12 {
+			&__nami_4 {
 				display: block;
 				width: 28.5%;
 				top: 99.765625vw;
@@ -172,3 +258,27 @@ import ResponsiveImage from '@components/ui/ResponsiveImage.astro';
 		}
 	}
 </style>
+
+<script>
+	document.addEventListener('DOMContentLoaded', function () {
+		const imageElements = Array.from(document.querySelectorAll('[class^=top__image_]')); // クラス名が top__image_ で始まる要素をすべて選択
+
+		// 配列をシャッフルする関数
+		function shuffleArray(array: Element[]) {
+			for (let i = array.length - 1; i > 0; i--) {
+				const j = Math.floor(Math.random() * (i + 1));
+				[array[i], array[j]] = [array[j], array[i]];
+			}
+		}
+
+		shuffleArray(imageElements); // 画像の要素の配列をシャッフル
+
+		imageElements.forEach((element, index) => {
+			setTimeout(() => {
+				const htmlElement = element as HTMLElement; // elementをHTMLElementとして型変換
+				htmlElement.classList.add('fade-in');
+				htmlElement.style.animationDuration = '1s';
+			}, index * 100); // 0.1秒ずつ遅延
+		});
+	});
+</script>
