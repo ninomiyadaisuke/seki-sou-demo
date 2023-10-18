@@ -31,7 +31,7 @@ import ResponsiveImage from '@components/ui/ResponsiveImage.astro';
 						src={image.src}
 						alt={image.alt}
 						sizes={image.sizes}
-						loading={image.loading}
+						loading={index === 0 ? 'eager' : 'lazy'}
 						decoding={image.decoding}
 					/>
 				</div>
@@ -277,7 +277,7 @@ import ResponsiveImage from '@components/ui/ResponsiveImage.astro';
 			setTimeout(() => {
 				const htmlElement = element as HTMLElement; // elementをHTMLElementとして型変換
 				htmlElement.classList.add('fade-in');
-				htmlElement.style.animationDuration = '0.1s';
+				htmlElement.style.animationDuration = '1s';
 			}, index * 100); // 0.1秒ずつ遅延
 		});
 	});
