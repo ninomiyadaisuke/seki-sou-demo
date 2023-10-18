@@ -34,12 +34,15 @@ const { title } = Astro.props as Props;
 
 	<style lang="scss">
 		@import '@styles/main.scss';
+		body {
+			background-color: var(--background-primary-color);
+		}
 		.container {
+			overflow: hidden;
 			display: grid;
 			grid-template-rows: auto 1fr auto;
 			grid-template-columns: 100%;
 			min-height: 100vh;
-			background-color: var(--background-primary-color);
 		}
 	</style>
 </html>

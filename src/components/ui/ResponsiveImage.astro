@@ -16,7 +16,7 @@ const {
 	src,
 	alt,
 	widths = [src.width / 2],
-	// sizes,
+	sizes,
 	loading = 'lazy',
 	decoding = 'async'
 } = Astro.props;
@@ -37,6 +37,5 @@ const sortWidths = generateWidths(widths);
 	widths={[...sortWidths, src.width]}
 	loading={loading}
 	decoding={decoding}
+	sizes={`(max-width:800px) ${sizes}`}
 />
-
-<!-- sizes={`(max-width:800px) ${sizes}`} -->
