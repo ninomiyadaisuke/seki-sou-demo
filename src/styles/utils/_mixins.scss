@@ -65,6 +65,7 @@ $__breakpoints: (
 	animation-name: fadeIn; /* フェードインのアニメーションを適用 */
 	animation-timing-function: ease-in;
 	animation-fill-mode: forwards; /* アニメーション終了後のスタイルを維持 */
+	animation-duration: 1s;
 }
 
 // アニメーションのキーフレーム
