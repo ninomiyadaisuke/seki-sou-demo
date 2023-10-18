@@ -1,3 +1,7 @@
+import Nami1 from '@assets/images/nami/nami_1@2x.png';
+import Nami2 from '@assets/images/nami/nami_2@2x.png';
+import Nami3 from '@assets/images/nami/nami_3@2x.png';
+import Nami4 from '@assets/images/nami/nami_4@2x.png';
 import TopImage1 from '@assets/images/top/home_main_1_1@2x.jpg';
 import TopImage2 from '@assets/images/top/home_main_1_2@2x.jpg';
 import TopImage3 from '@assets/images/top/home_main_2_1@2x.jpg';
@@ -73,5 +77,30 @@ export const imageData = [
 		loading: 'eager',
 		decoding: 'sync',
 		sizes: '27vw, 12.5vw'
+	},
+	{
+		src: Nami1,
+		alt: 'Nami1',
+		loading: 'eager',
+		decoding: 'sync'
+	},
+
+	{
+		src: Nami2,
+		alt: 'Nami3',
+		loading: 'eager',
+		decoding: 'sync'
+	},
+	{
+		src: Nami3,
+		alt: 'Nami2',
+		loading: 'eager',
+		decoding: 'sync'
+	},
+	{
+		src: Nami4,
+		alt: 'Nami4',
+		loading: 'eager',
+		decoding: 'sync'
 	}
 ] satisfies TImage[];
