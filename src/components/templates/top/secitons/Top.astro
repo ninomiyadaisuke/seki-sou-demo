@@ -24,57 +24,102 @@ import ResponsiveImage from '@components/ui/ResponsiveImage.astro';
 <style lang="scss">
 	@import '@styles/main.scss';
 	.top {
-		// height: 1000px;
-		display: flex;
-		flex-wrap: wrap;
+		position: relative;
+		height: 413vw;
+		&__image_1,
+		&__image_2,
+		&__image_3,
+		&__image_4,
+		&__image_5,
+		&__image_6,
+		&__image_7,
+		&__image_8 {
+			position: absolute;
+			z-index: 1;
+		}
 		&__image_1 {
 			width: 64%;
+			top: 47vw;
+			left: calc(50% - 24.5vw);
 		}
 		&__image_2 {
 			display: none;
 		}
 		&__image_3 {
-			width: 36%;
+			top: 131vw;
+			left: -10.7vw;
+			width: 42.7%;
 		}
 		&__image_4 {
-			width: 27%;
+			top: 180vw;
+			left: 22.7vw;
+			width: 32%;
 		}
 		&__image_5 {
+			top: 0;
+			left: calc(100% - 6.1vw);
 			width: 36%;
 		}
 		&__image_6 {
-			width: 54%;
+			top: 243.7vw;
+			left: 44vw;
+			width: 64%;
 		}
 		&__image_7 {
-			width: 27%;
+			top: 328.8vw;
+			left: 23.5vw;
+			width: 32%;
+			z-index: -1;
 		}
 		&__image_8 {
+			top: 252.3vw;
+			left: -12.5vw;
 			width: 27%;
 		}
 		@include mq('md') {
+			height: 100vw;
 			&__image_1 {
+				top: 8.75vw;
+				left: calc(50% - 18vw);
 				width: 31%;
 			}
 			&__image_2 {
 				display: block;
+				top: -3.75vw;
+				left: calc(50% + 10.15625vw);
+				z-index: 0;
 				width: 12.5%;
 			}
 			&__image_3 {
+				top: 27.5vw;
+				left: -3.515625vw;
 				width: 18.8%;
 			}
 			&__image_4 {
+				top: 47.265625vw;
+				left: 11.71875vw;
 				width: 12.5%;
 			}
 			&__image_5 {
+				top: 16.09375vw;
+				right: -7.03125vw;
 				width: 18.8%;
 			}
 			&__image_6 {
+				top: 57.96875vw;
+				left: 56.328125vw;
 				width: 25%;
+				z-index: 11;
 			}
 			&__image_7 {
-				width: 12.5%;
+				top: 90vw;
+				left: 75vw;
+				width: 18.75%;
+				z-index: 10;
 			}
 			&__image_8 {
+				top: 87.03125vw;
+				left: 14.0625vw;
 				width: 12.5%;
 			}
 		}

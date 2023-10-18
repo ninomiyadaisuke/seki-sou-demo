@@ -30,8 +30,8 @@ import { Image } from 'astro:assets';
 		position: relative;
 		&__container {
 			position: absolute;
-			top: 40px;
-			left: 40px;
+			top: 24px;
+			left: 24px;
 			z-index: 9997;
 			&_logo {
 				width: 140px;
@@ -40,7 +40,7 @@ import { Image } from 'astro:assets';
 				margin-top: 32px;
 				font-size: 12px;
 				span {
-					// display: block;
+					display: block;
 				}
 			}
 		}
@@ -116,8 +116,12 @@ import { Image } from 'astro:assets';
 			}
 		}
 		@include mq('md') {
-			&__container_logo {
-				width: 170px;
+			&__container {
+				top: 40px;
+				left: 40px;
+				&_logo {
+					width: 170px;
+				}
 			}
 		}
 	}
