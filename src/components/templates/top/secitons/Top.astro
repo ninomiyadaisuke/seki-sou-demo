@@ -108,6 +108,12 @@ import ResponsiveImage from '@components/ui/ResponsiveImage.astro';
 			z-index: 1;
 			opacity: 0;
 		}
+		&__nami_1,
+		&__nami_2,
+		&__nami_3,
+		&__nami_4 {
+			opacity: 1;
+		}
 		&__image_1 {
 			width: 64%;
 			top: 47vw;
@@ -260,9 +266,7 @@ import ResponsiveImage from '@components/ui/ResponsiveImage.astro';
 </style>
 
 <script>
-	const imageElements = Array.from(document.querySelectorAll('[class^=top__image_]')); // クラス名が top__image_ で始まる要素をすべて選択
-
-	// 配列をシャッフルする関数
+	const imageElements = Array.from(document.querySelectorAll('[class^=top__image_]'));
 	function shuffleArray(array: Element[]) {
 		for (let i = array.length - 1; i > 0; i--) {
 			const j = Math.floor(Math.random() * (i + 1));
@@ -271,11 +275,10 @@ import ResponsiveImage from '@components/ui/ResponsiveImage.astro';
 	}
 
 	shuffleArray(imageElements); // 画像の要素の配列をシャッフル
-
 	imageElements.forEach((element, index) => {
 		setTimeout(() => {
 			const htmlElement = element;
 			htmlElement.classList.add('fade-in');
-		}, index * 10); // 0.1秒ずつ遅延
+		}, index * 100); // 0.1秒ずつ遅延
 	});
 </script>
