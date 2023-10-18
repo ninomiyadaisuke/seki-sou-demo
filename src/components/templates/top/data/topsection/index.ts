@@ -77,7 +77,10 @@ export const imageData = [
 		loading: 'eager',
 		decoding: 'sync',
 		sizes: '27vw, 12.5vw'
-	},
+	}
+] satisfies TImage[];
+
+export const namiImageData = [
 	{
 		src: Nami1,
 		alt: 'Nami1',
