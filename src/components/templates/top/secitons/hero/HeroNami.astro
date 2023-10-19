@@ -1,0 +1,84 @@
+---
+import { namiImageData } from '@components/templates/top/data/topsection';
+import ResponsiveImage from '@components/ui/ResponsiveImage.astro';
+---
+
+{
+	namiImageData.map((image, index) => {
+		return (
+			<div class={`nami_${index + 1}`}>
+				<ResponsiveImage
+					src={image.src}
+					alt={image.alt}
+					loading={image.loading}
+					decoding={image.decoding}
+				/>
+			</div>
+		);
+	})
+}
+
+<style is:global lang="scss">
+	@import '@styles/main.scss';
+	.nami_1,
+	.nami_2,
+	.nami_3,
+	.nami_4 {
+		position: absolute;
+		z-index: 1;
+		opacity: 0;
+	}
+	.nami_1 {
+		width: 103.4666666667vw;
+		top: 74.6666666667vw;
+		left: -56.2666666667vw;
+	}
+	.nami_2 {
+		width: 114.1333333333vw;
+		top: 390vw;
+		left: 9.3333333333vw;
+	}
+	.nami_3 {
+		width: 101.6vw;
+		top: 117.8666666667vw;
+		left: 42.4vw;
+	}
+	.nami_4 {
+		display: none;
+	}
+	.side-in {
+		@include sideIn;
+	}
+	@include mq('md') {
+		.nami_1 {
+			top: 29.21875vw;
+			left: -1.328125vw;
+			width: 30%;
+		}
+		.nami_2 {
+			width: 33.4375vw;
+			top: 75.546875vw;
+			left: 16.875vw;
+		}
+		.nami_3 {
+			width: 29.765625vw;
+			top: 36.09375vw;
+			left: calc(100% - 26vw);
+		}
+		.nami_4 {
+			display: block;
+			width: 28.5%;
+			top: 99.765625vw;
+			left: 3.671875vw;
+		}
+	}
+</style>
+
+<script>
+	document.addEventListener('DOMContentLoaded', () => {
+		const imageElements = Array.from(document.querySelectorAll('[class^=nami_]'));
+		imageElements.forEach(element => {
+			element.classList.add('side-in');
+		});
+	});
+</script>
