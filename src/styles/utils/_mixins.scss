@@ -60,14 +60,12 @@ $__breakpoints: (
 }
 
 // フェードインアニメーションのmixin
-// $duration と $delay 引数を追加し、デフォルト値をそれぞれ1sと0sとします
-@mixin fadeIn($delay: 0s, $duration: 1s) {
-	opacity: 0; // 最初は非表示
-	animation-name: fadeIn; // フェードインのアニメーションを適用
+@mixin fadeIn {
+	opacity: 0; /* 最初は非表示 */
+	animation-name: fadeIn; /* フェードインのアニメーションを適用 */
 	animation-timing-function: ease-in;
-	animation-fill-mode: forwards; // アニメーション終了後のスタイルを維持
-	animation-duration: $duration; // 引数で指定されたdurationを使用
-	animation-delay: $delay; // 引数で指定されたdelayを使用
+	animation-fill-mode: forwards; /* アニメーション終了後のスタイルを維持 */
+	animation-duration: 1s;
 }
 
 // アニメーションのキーフレーム
