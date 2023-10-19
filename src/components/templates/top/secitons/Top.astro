@@ -312,14 +312,14 @@ import ResponsiveImage from '@components/ui/ResponsiveImage.astro';
 		});
 	};
 
-	// Intersection Observerの設定
-	const options = {
-		root: null, // ビューポートを基準とする
-		rootMargin: '0px',
-		threshold: 0.1 // 少しでも表示されたらトリガー
-	};
+	// // Intersection Observerの設定
+	// const options = {
+	// 	root: null, // ビューポートを基準とする
+	// 	rootMargin: '0px',
+	// 	threshold: 0.1 // 少しでも表示されたらトリガー
+	// };
 
-	const observer = new IntersectionObserver(handleIntersect, options);
+	const observer = new IntersectionObserver(handleIntersect);
 
 	animatedElements.forEach(element => {
 		observer.observe(element);
