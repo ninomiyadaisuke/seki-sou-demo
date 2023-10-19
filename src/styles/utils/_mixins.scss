@@ -77,3 +77,22 @@ $__breakpoints: (
 		opacity: 1;
 	}
 }
+
+@mixin sideIn {
+	animation-name: sideIn; /* フェードインのアニメーションを適用 */
+	animation-timing-function: ease-in;
+	animation-fill-mode: forwards; /* アニメーション終了後のスタイルを維持 */
+	animation-duration: 1s;
+	animation-delay: 0.9s;
+}
+
+@keyframes sideIn {
+	from {
+		opacity: 0;
+		transform: translateX(-100px);
+	}
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}

@@ -95,6 +95,24 @@ import ResponsiveImage from '@components/ui/ResponsiveImage.astro';
 				}
 			}
 		}
+		@keyframes fadeIn {
+			from {
+				opacity: 0;
+				transform: translateY(1em);
+			}
+			to {
+				opacity: 1;
+				transform: translateY(0);
+			}
+		}
+
+		h1 p {
+			opacity: 0;
+			transform: translateY(-1em) translateX(-1em); // 斜め上からの移動
+			transition:
+				opacity 0.5s,
+				transform 0.5s;
+		}
 		&__image_1,
 		&__image_2,
 		&__image_3,
@@ -115,7 +133,7 @@ import ResponsiveImage from '@components/ui/ResponsiveImage.astro';
 		&__nami_2,
 		&__nami_3,
 		&__nami_4 {
-			opacity: 1;
+			opacity: 0;
 		}
 		&__image_1 {
 			width: 64%;
@@ -178,6 +196,9 @@ import ResponsiveImage from '@components/ui/ResponsiveImage.astro';
 		.fade-in {
 			@include fadeIn;
 		}
+		.side-in {
+			@include sideIn;
+		}
 		.animated-element {
 			opacity: 0;
 			transform: rotate(4deg) translate(-20px, -20px);
@@ -186,9 +207,10 @@ import ResponsiveImage from '@components/ui/ResponsiveImage.astro';
 				transform 1s;
 			&.is-visible {
 				opacity: 1;
-				transform: rotate(0deg) translateY(0);
+				transform: rotate(0deg) translate(0);
 			}
 		}
+
 		@include mq('md') {
 			height: 100vw;
 			h1 {
@@ -296,5 +318,58 @@ import ResponsiveImage from '@components/ui/ResponsiveImage.astro';
 				htmlElement.classList.add('fade-in');
 			}, index * 100); // 0.1秒ずつ遅延
 		});
+	});
+</script>
+
+<script>
+	document.addEventListener('DOMContentLoaded', () => {
+		const animatedElements = document.querySelectorAll('.animated-element');
+		const handleIntersect = (entries: IntersectionObserverEntry[]) => {
+			entries.forEach(entry => {
+				if (entry.isIntersecting) {
+					// 要素がビューポートに表示された場合
+					entry.target.classList.add('is-visible'); // アニメーションクラスを追加
+				}
+			});
+		};
+		// Intersection Observerの設定
+		const options = {
+			root: null, // ビューポートを基準とする
+			rootMargin: '0px',
+			threshold: 0.1 // 少しでも表示されたらトリガー
+		};
+		const observer = new IntersectionObserver(handleIntersect, options);
+
+		animatedElements.forEach(element => {
+			observer.observe(element);
+		});
+	});
+</script>
+
+<script>
+	document.addEventListener('DOMContentLoaded', () => {
+		const imageElements = Array.from(document.querySelectorAll('[class^=top__nami_]'));
+		imageElements.forEach(element => {
+			element.classList.add('side-in');
+		});
+	});
+</script>
+
+<script>
+	document.addEventListener('DOMContentLoaded', () => {
+		const paragraphs = document.querySelectorAll('h1 p');
+
+		// 全体を1秒後に実行するように設定
+		setTimeout(() => {
+			paragraphs.forEach((paragraph, index) => {
+				// paragraphをHTMLElementとして型付け
+				const styledParagraph = paragraph as HTMLElement;
+
+				setTimeout(() => {
+					styledParagraph.style.opacity = '1';
+					styledParagraph.style.transform = 'translateY(0)';
+				}, index * 200); // それぞれの<p>タグに0.5秒の間隔を持たせる
+			});
+		}, 1000); // 1秒の遅延
 	});
 </script>

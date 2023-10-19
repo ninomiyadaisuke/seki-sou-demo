@@ -28,6 +28,7 @@ import { Image } from 'astro:assets';
 	@import '@styles/main.scss';
 	.header {
 		position: relative;
+		z-index: 999;
 		&__container {
 			position: absolute;
 			top: 24px;
@@ -43,7 +44,13 @@ import { Image } from 'astro:assets';
 					display: block;
 				}
 			}
+			opacity: 0; // 初期の透明度を設定
+			transform: translateY(-4%); // 初期位置を設定
+			transition:
+				transform 1s,
+				opacity 1s; // アニメーションの追加
 		}
+
 		&__menu {
 			background-color: var(--white);
 			position: fixed;
@@ -114,6 +121,11 @@ import { Image } from 'astro:assets';
 				transform: rotate(-45deg);
 				opacity: 1;
 			}
+			opacity: 0; // 初期の透明度を設定
+			transform: translateY(4%); // 初期位置を設定
+			transition:
+				transform 1s,
+				opacity 1s; // アニメーションの追加
 		}
 		@include mq('md') {
 			&__container {
@@ -133,4 +145,16 @@ import { Image } from 'astro:assets';
 		button!.classList.toggle('open');
 	}
 	button!.addEventListener('click', toggleHeaderPadding);
+	document.addEventListener('DOMContentLoaded', () => {
+		const container = document.querySelector('.header__container') as HTMLElement;
+		const menu = document.querySelector('.header__menu') as HTMLElement;
+
+		// 1秒の遅延後にアニメーション開始
+		setTimeout(() => {
+			container!.style.transform = 'translateY(0%)'; // 元の位置に戻す
+			container!.style.opacity = '1'; // 透明度を元に戻す
+			menu!.style.transform = 'translateY(0%)'; // 元の位置に戻す
+			menu!.style.opacity = '1'; // 透明度を元に戻す
+		}, 1000);
+	});
 </script>
