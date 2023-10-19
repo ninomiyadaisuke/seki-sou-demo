@@ -1,0 +1,24 @@
+---
+import HeroContent from './HeroContent.astro';
+import HeroImages from './HeroImages.astro';
+import HeroNami from './HeroNami.astro';
+import HeroTitle from './HeroTitle.astro';
+---
+
+<section class="top">
+	<HeroTitle />
+	<HeroContent />
+	<HeroImages />
+	<HeroNami />
+</section>
+
+<style is:global lang="scss">
+	@import '@styles/main.scss';
+	.top {
+		position: relative;
+		height: 413vw;
+		@include mq('md') {
+			height: 100vw;
+		}
+	}
+</style>

@@ -1,0 +1,78 @@
+---
+const data = ['純度の高い', 'なめらかなしあわせ', '親密な温度の', 'バターサンド'];
+---
+
+<h1>
+	{data.map(item => <p>{item}</p>)}
+</h1>
+
+<style is:global lang="scss">
+	@import '@styles/main.scss';
+
+	h1 {
+		position: absolute;
+		right: 7.4666666667vw;
+		top: 150.9333333333vw;
+		font-size: 3.7333333333vw;
+		width: auto;
+		height: auto;
+		font-size: 3.7333333333vw;
+		writing-mode: vertical-rl;
+		line-height: 1.2;
+		p {
+			margin-left: 4.2vw;
+			&:nth-child(3),
+			&:nth-child(4) {
+				display: inline-block;
+				margin-left: 0;
+			}
+		}
+	}
+
+	h1 p {
+		opacity: 0;
+		transform: translateY(-1em) translateX(-1em); // 斜め上からの移動
+		transition:
+			opacity 0.5s,
+			transform 0.5s;
+	}
+	// .fade-in {
+	// 	@include fadeIn;
+	// }
+	// .side-in {
+	// 	@include sideIn;
+	// }
+	@include mq('md') {
+		h1 {
+			font-size: 1.25vw;
+			right: 18.75vw;
+			top: 23.4375vw;
+			p {
+				margin-left: 2vw;
+				&:nth-child(3),
+				&:nth-child(4) {
+					display: block;
+					margin-left: 2vw;
+				}
+			}
+		}
+	}
+</style>
+
+<script>
+	document.addEventListener('DOMContentLoaded', () => {
+		const paragraphs = document.querySelectorAll('h1 p');
+		// 全体を1秒後に実行するように設定
+		setTimeout(() => {
+			paragraphs.forEach((paragraph, index) => {
+				// paragraphをHTMLElementとして型付け
+				const styledParagraph = paragraph as HTMLElement;
+
+				setTimeout(() => {
+					styledParagraph.style.opacity = '1';
+					styledParagraph.style.transform = 'translateY(0)';
+				}, index * 200); // それぞれの<p>タグに0.5秒の間隔を持たせる
+			});
+		}, 1000); // 1秒の遅延
+	});
+</script>

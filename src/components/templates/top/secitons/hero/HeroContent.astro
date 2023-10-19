@@ -1,0 +1,65 @@
+---
+const data = [
+	'ForestSea,Forest &amp; City.',
+	'As it melts into the painting.',
+	'Butter Sand,',
+	'the destinationof memory.'
+];
+---
+
+<div class="content">
+	{data.map(item => <p class="animated-element">{item}</p>)}
+</div>
+
+<style lang="scss">
+	@import '@styles/main.scss';
+	.content {
+		position: absolute;
+		left: 12vw;
+		top: 380vw;
+		font-size: 4.2666666667vw;
+		width: auto;
+		height: auto;
+		.animated-element {
+			opacity: 0;
+			transform: rotate(4deg) translate(-20px, -20px);
+			transition:
+				opacity 1s,
+				transform 1s;
+			&.is-visible {
+				opacity: 1;
+				transform: rotate(0deg) translate(0);
+			}
+		}
+
+		@include mq('md') {
+			font-size: 1.5625vw;
+			left: 17.734375vw;
+			top: 72.265625vw;
+		}
+	}
+</style>
+<script>
+	document.addEventListener('DOMContentLoaded', () => {
+		const animatedElements = document.querySelectorAll('.animated-element');
+		const handleIntersect = (entries: IntersectionObserverEntry[]) => {
+			entries.forEach(entry => {
+				if (entry.isIntersecting) {
+					// 要素がビューポートに表示された場合
+					entry.target.classList.add('is-visible'); // アニメーションクラスを追加
+				}
+			});
+		};
+		// Intersection Observerの設定
+		const options = {
+			root: null, // ビューポートを基準とする
+			rootMargin: '0px',
+			threshold: 0.1 // 少しでも表示されたらトリガー
+		};
+		const observer = new IntersectionObserver(handleIntersect, options);
+
+		animatedElements.forEach(element => {
+			observer.observe(element);
+		});
+	});
+</script>
