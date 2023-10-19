@@ -296,7 +296,11 @@ import ResponsiveImage from '@components/ui/ResponsiveImage.astro';
 				htmlElement.classList.add('fade-in');
 			}, index * 100); // 0.1秒ずつ遅延
 		});
+	});
+</script>
 
+<script>
+	document.addEventListener('DOMContentLoaded', function () {
 		const animatedElements = document.querySelectorAll('.animated-element');
 
 		// Intersection Observerのコールバック
