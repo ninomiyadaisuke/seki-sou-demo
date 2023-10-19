@@ -106,7 +106,7 @@ import ResponsiveImage from '@components/ui/ResponsiveImage.astro';
 		&__nami_4 {
 			position: absolute;
 			z-index: 1;
-			opacity: 0;
+			opacity: 1;
 		}
 		&__nami_1,
 		&__nami_2,
@@ -266,19 +266,21 @@ import ResponsiveImage from '@components/ui/ResponsiveImage.astro';
 </style>
 
 <script>
-	const imageElements = Array.from(document.querySelectorAll('[class^=top__image_]'));
-	function shuffleArray(array: Element[]) {
-		for (let i = array.length - 1; i > 0; i--) {
-			const j = Math.floor(Math.random() * (i + 1));
-			[array[i], array[j]] = [array[j], array[i]];
-		}
-	}
+	// document.addEventListener('DOMContentLoaded', () => {
+	// 	const imageElements = Array.from(document.querySelectorAll('[class^=top__image_]'));
+	// 	function shuffleArray(array: Element[]) {
+	// 		for (let i = array.length - 1; i > 0; i--) {
+	// 			const j = Math.floor(Math.random() * (i + 1));
+	// 			[array[i], array[j]] = [array[j], array[i]];
+	// 		}
+	// 	}
 
-	shuffleArray(imageElements); // 画像の要素の配列をシャッフル
-	imageElements.forEach((element, index) => {
-		setTimeout(() => {
-			const htmlElement = element;
-			htmlElement.classList.add('fade-in');
-		}, index * 100); // 0.1秒ずつ遅延
-	});
+	// 	shuffleArray(imageElements); // 画像の要素の配列をシャッフル
+	// 	imageElements.forEach((element, index) => {
+	// 		setTimeout(() => {
+	// 			const htmlElement = element;
+	// 			htmlElement.classList.add('fade-in');
+	// 		}, index * 100); // 0.1秒ずつ遅延
+	// 	});
+	// });
 </script>
