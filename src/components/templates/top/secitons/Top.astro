@@ -300,31 +300,29 @@ import ResponsiveImage from '@components/ui/ResponsiveImage.astro';
 </script>
 
 <script>
-	document.addEventListener('DOMContentLoaded', function () {
-		const animatedElements = document.querySelectorAll('.animated-element');
+	const animatedElements = document.querySelectorAll('.animated-element');
 
-		// Intersection Observerのコールバック
-		const handleIntersect = (entries: IntersectionObserverEntry[]) => {
-			console.log(entries);
-			entries.forEach(entry => {
-				if (entry.isIntersecting) {
-					// 要素がビューポートに表示された場合
-					entry.target.classList.add('is-visible'); // アニメーションクラスを追加
-				}
-			});
-		};
-
-		// Intersection Observerの設定
-		const options = {
-			root: null, // ビューポートを基準とする
-			rootMargin: '0px',
-			threshold: 0.1 // 少しでも表示されたらトリガー
-		};
-
-		const observer = new IntersectionObserver(handleIntersect, options);
-
-		animatedElements.forEach(element => {
-			observer.observe(element);
+	// Intersection Observerのコールバック
+	const handleIntersect = (entries: IntersectionObserverEntry[]) => {
+		console.log(entries);
+		entries.forEach(entry => {
+			if (entry.isIntersecting) {
+				// 要素がビューポートに表示された場合
+				entry.target.classList.add('is-visible'); // アニメーションクラスを追加
+			}
 		});
+	};
+
+	// Intersection Observerの設定
+	const options = {
+		root: null, // ビューポートを基準とする
+		rootMargin: '0px',
+		threshold: 0.1 // 少しでも表示されたらトリガー
+	};
+
+	const observer = new IntersectionObserver(handleIntersect, options);
+
+	animatedElements.forEach(element => {
+		observer.observe(element);
 	});
 </script>
