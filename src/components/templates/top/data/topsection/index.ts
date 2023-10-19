@@ -26,6 +26,7 @@ export const imageData = [
 		src: TopImage1, //width 800
 		alt: 'TopImage1',
 		loading: 'eager',
+		widths: [100],
 		decoding: 'sync',
 		sizes: '64vw, 31vw'
 	},
@@ -33,6 +34,7 @@ export const imageData = [
 		src: TopImage2, // width 320
 		alt: 'TopImage2',
 		loading: 'eager',
+		widths: [100],
 		decoding: 'sync',
 		sizes: '27vw, 12.5vw'
 	},
@@ -40,6 +42,7 @@ export const imageData = [
 		src: TopImage3, // width 480
 		alt: 'TopImage3',
 		loading: 'eager',
+		widths: [100],
 		decoding: 'sync',
 		sizes: '36vw, 18.8vw'
 	},
@@ -54,6 +57,7 @@ export const imageData = [
 		src: TopImage5, // width 480
 		alt: 'TopImage5',
 		loading: 'eager',
+		widths: [100],
 		decoding: 'sync',
 		sizes: '36vw, 18.8vw'
 	},
@@ -61,6 +65,7 @@ export const imageData = [
 		src: TopImage6, // width 640
 		alt: 'TopImage6',
 		loading: 'eager',
+		widths: [100],
 		decoding: 'sync',
 		sizes: '54vw, 25vw'
 	},
@@ -68,6 +73,7 @@ export const imageData = [
 		src: TopImage7, // width 480
 		alt: 'TopImage7',
 		loading: 'eager',
+		widths: [100],
 		decoding: 'sync',
 		sizes: '27vw, 12.5vw'
 	},
@@ -75,6 +81,7 @@ export const imageData = [
 		src: TopImage8, // width 320
 		alt: 'TopImage8',
 		loading: 'eager',
+		widths: [100],
 		decoding: 'sync',
 		sizes: '27vw, 12.5vw'
 	}
@@ -85,6 +92,7 @@ export const namiImageData = [
 		src: Nami1,
 		alt: 'Nami1',
 		loading: 'eager',
+		widths: [100],
 		decoding: 'sync'
 	},
 
@@ -92,18 +100,21 @@ export const namiImageData = [
 		src: Nami2,
 		alt: 'Nami3',
 		loading: 'eager',
+		widths: [100],
 		decoding: 'sync'
 	},
 	{
 		src: Nami3,
 		alt: 'Nami2',
 		loading: 'eager',
+		widths: [100],
 		decoding: 'sync'
 	},
 	{
 		src: Nami4,
 		alt: 'Nami4',
 		loading: 'eager',
+		widths: [100],
 		decoding: 'sync'
 	}
 ] satisfies TImage[];
