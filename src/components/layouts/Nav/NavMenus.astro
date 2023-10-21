@@ -1,0 +1,158 @@
+---
+import Logo from '@assets/images/logo/logo@2x.png';
+import ResponsiveImage from '@components/ui/ResponsiveImage.astro';
+import Icon from 'astro-icon';
+---
+
+<nav class="nav">
+	<div class="nav__container">
+		<div class="nav__logo">
+			<ResponsiveImage src={Logo} alt="logo" />
+			<div class="nav__title">
+				Highly pure &
+				<span>Smooth happiness.</span>
+				<span>Intimate temperature Butter Sand.</span>
+			</div>
+		</div>
+		<div class="nav__menus">
+			<ul class="nav__main">
+				<li>
+					<a href="">オンラインショップ</a>
+				</li>
+				<li><a href="">オンラインショップ</a></li>
+				<li><a href="">お知らせ</a></li>
+				<li><a href="">お問い合わせ</a></li>
+			</ul>
+			<ul class="nav__sub">
+				<li>
+					<a href="">よくあるご質問</a>
+				</li>
+				<a href="">プライバシーポリシー</a>
+				<li><a href="">特定取引に基づく表記</a></li>
+			</ul>
+			<ul class="nav__sns">
+				<li>
+					<a href="">
+						<Icon class="nav__sns_icon" pack="mdi" name="instagram" />
+						<span>Instagram</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</nav>
+
+<style lang="scss">
+	@import '@styles/main.scss';
+	.nav {
+		display: none;
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		overflow-y: auto;
+		z-index: 990;
+		width: 100%;
+		padding: 30vw 10vw 30vw 37vw;
+		background-color: var(--white);
+		&__container {
+			display: flex;
+			flex-direction: column;
+			gap: 50px;
+		}
+		&__logo {
+			min-width: 126px;
+			width: 70%;
+		}
+		&__title {
+			margin-top: 32px;
+			span {
+				display: block;
+				font-size: 10px;
+			}
+		}
+		&.open {
+			display: block;
+		}
+
+		&__menus {
+			display: flex;
+			flex-direction: column;
+			gap: 50px;
+		}
+		&__main {
+			font-size: 20px;
+			li {
+				line-height: 2.5;
+			}
+		}
+		&__sub {
+			font-size: 14px;
+			li {
+				line-height: 2.5;
+			}
+		}
+
+		&__sns {
+			a {
+				display: flex;
+			}
+			span {
+				display: flex;
+				align-items: center;
+				padding-left: 10px;
+				font-size: 18px;
+			}
+			&_icon {
+				align-self: center;
+				width: 18px;
+			}
+		}
+
+		&__main,
+		&__sub,
+		&__sns {
+			position: relative;
+			a {
+				&:hover {
+					transition: color 0.2s;
+					color: #999999;
+				}
+			}
+			&::before {
+				content: '';
+				position: absolute;
+				left: 0;
+				top: -25px;
+				width: 40px;
+				height: 1px;
+				background-color: var(--gray-light-color);
+			}
+		}
+
+		@include mq('md') {
+			padding: 150px;
+			display: flex;
+			justify-content: flex-end;
+			&__container {
+				flex-direction: row;
+				gap: 80px;
+			}
+			&__menus {
+				margin-top: -15px;
+			}
+
+			&__main,
+			&__sub,
+			&__sns {
+				&::before {
+					display: none;
+				}
+			}
+			&__logo {
+				width: 146px;
+			}
+		}
+	}
+</style>

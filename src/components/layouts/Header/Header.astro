@@ -28,12 +28,11 @@ import { Image } from 'astro:assets';
 	@import '@styles/main.scss';
 	.header {
 		position: relative;
-		z-index: 999;
 		&__container {
 			position: absolute;
 			top: 24px;
 			left: 24px;
-			z-index: 9997;
+			z-index: 900;
 			&_logo {
 				width: 140px;
 			}
@@ -141,8 +140,10 @@ import { Image } from 'astro:assets';
 
 <script>
 	const button = document.querySelector('.header__menu_button');
+	const nav = document.querySelector('.nav');
 	function toggleHeaderPadding() {
 		button!.classList.toggle('open');
+		nav!.classList.toggle('open');
 	}
 	button!.addEventListener('click', toggleHeaderPadding);
 	document.addEventListener('DOMContentLoaded', () => {
