@@ -12,7 +12,7 @@ import TopImage7 from '@assets/images/top/home_main_4_2@2x.jpg';
 import TopImage8 from '@assets/images/top/home_main_5_1@2x.jpg';
 import type { ImageMetadata } from 'astro';
 
-type TImage = {
+export type TImage = {
 	src: ImageMetadata;
 	alt: string;
 	widths?: readonly number[];

@@ -1,0 +1,81 @@
+---
+import ResponsiveImage from '@components/ui/ResponsiveImage.astro';
+import ViewMore from '@components/ui/ViewMore.astro';
+
+import type { TImage } from '../../data/topsection';
+
+type Props = {
+	type: '風' | '波' | '虹';
+	description: string;
+	imageData: TImage;
+	href: string;
+	imagePosition?: 'left' | 'right';
+};
+const { type, description, imageData, href, imagePosition = 'right' } = Astro.props;
+---
+
+<div class={`item ${imagePosition}`}>
+	<div class="item__image">
+		<h3>{`${type}セット`}</h3>
+		<ResponsiveImage
+			src={imageData.src}
+			alt={imageData.alt}
+			sizes={imageData.sizes}
+			loading={imageData.loading}
+			decoding={imageData.decoding}
+		/>
+	</div>
+	<div class="item__description">
+		<p>{description}</p>
+		<div class="item__description_link">
+			<ViewMore href={href} />
+		</div>
+	</div>
+</div>
+
+<style lang="scss">
+	@import '@styles/main.scss';
+	.item {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		gap: 30px;
+		&__image {
+			position: relative;
+			h3 {
+				position: absolute;
+				font-size: 20px;
+				top: -32px;
+				left: 30px;
+				writing-mode: vertical-rl;
+			}
+		}
+		&__description {
+			letter-spacing: 2px;
+			align-self: center;
+			font-size: 14px;
+			width: auto;
+			&_link {
+				margin-top: 30px;
+				text-align: end;
+			}
+		}
+		@include mq('md') {
+			flex-direction: row;
+			display: flex;
+			justify-content: space-between;
+			gap: 7%;
+			margin: 0 auto;
+			max-width: 976px;
+			&__image {
+				max-width: 600px;
+			}
+			&__description {
+				width: 300px;
+			}
+			&.right {
+				flex-direction: row-reverse;
+			}
+		}
+	}
+</style>
