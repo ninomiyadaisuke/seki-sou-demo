@@ -1,0 +1,60 @@
+---
+import { productsData } from '@components/templates/top/data/productSection';
+
+import ProductItem from './ProductItem.astro';
+---
+
+<section class="products">
+	<div class="products__list">
+		{
+			productsData.map(item => (
+				<ProductItem
+					imageData={item.imageData}
+					href={item.href}
+					description={item.description}
+					type={item.type}
+					imagePosition={item.imagePostion}
+				/>
+			))
+		}
+		<p>
+			同種類のセットもご用意しております。<span
+			><a href="/">商品一覧</a>からご覧ください。</span
+			>
+		</p>
+	</div>
+</section>
+
+<style lang="scss">
+	@import '@styles/main.scss';
+	.products {
+		background-color: var(--white);
+		padding: 21vw 9.6% 30vw 9.6%;
+		&__list {
+			display: flex;
+			flex-direction: column;
+			gap: 21vw;
+		}
+		p {
+			font-size: 12px;
+			text-align: end;
+			span {
+				display: block;
+				text-align: end;
+				a {
+					color: var(--mediumBrown);
+					text-decoration: underline;
+				}
+			}
+		}
+		@include mq('md') {
+			padding: 12vw 0 0 0;
+			&__list {
+				background-color: var(--white);
+				width: calc(100% - 180px);
+				margin: 0 auto;
+				gap: 7.8vw;
+			}
+		}
+	}
+</style>

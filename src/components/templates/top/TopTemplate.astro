@@ -1,44 +1,16 @@
 ---
-import KazeItem from '@assets/images/product/home_products_kaze@2x.jpg';
-
-import type { TImage } from './data/topsection';
-import SetItem from './secitons/product/ProductItem.astro';
-
-const data: TImage = {
-	src: KazeItem,
-	alt: 'TopImage1',
-	loading: 'eager',
-	decoding: 'sync',
-	sizes: '81vw, 600px'
-};
+import Top from './secitons/hero/Hero.astro';
+import ProductsSection from './secitons/product/ProductsSection.astro';
 ---
 
 <div class="test">
-	<!-- <Top /> -->
-	<div class="test__item">
-		<SetItem
-			imageData={data}
-			href="/"
-			type="風"
-			description="馴染んで呼吸と同じ、定番の4種"
-		/>
-	</div>
-	<div class="test__item">
-		<SetItem
-			imageData={data}
-			imagePosition="left"
-			href="/"
-			type="風"
-			description="馴染んで呼吸と同じ、定番の4種"
-		/>
-	</div>
+	<Top />
+	<ProductsSection />
 </div>
 
 <style lang="scss">
 	@import '@styles/main.scss';
 	.test {
-		margin-top: 50px;
-		padding: 0 9.6%;
 		@include mq('md') {
 			padding: 0;
 			&__item {
