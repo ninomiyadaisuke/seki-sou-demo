@@ -133,8 +133,11 @@ import Icon from 'astro-icon';
 
 		@include mq('md') {
 			padding: 150px;
-			display: flex;
 			justify-content: flex-end;
+			&.open {
+				display: flex;
+			}
+
 			&__container {
 				flex-direction: row;
 				gap: 80px;
