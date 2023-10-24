@@ -18,9 +18,10 @@ import ProductItem from './ProductItem.astro';
 			))
 		}
 		<p>
-			同種類のセットもご用意しております。<span
-			><a href="/">商品一覧</a>からご覧ください。</span
-			>
+			同種類のセットもご用意しております。
+			<span>
+				<a href="/">商品一覧</a>からご覧ください。
+			</span>
 		</p>
 	</div>
 </section>
@@ -42,13 +43,14 @@ import ProductItem from './ProductItem.astro';
 				display: block;
 				text-align: end;
 				a {
+					font-weight: bold;
 					color: var(--mediumBrown);
 					text-decoration: underline;
 				}
 			}
 		}
 		@include mq('md') {
-			padding: 12vw 0 0 0;
+			padding: 12vw 0;
 			&__list {
 				background-color: var(--white);
 				width: calc(100% - 180px);
