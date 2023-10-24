@@ -1,0 +1,75 @@
+---
+import Nami from '@assets/images/nami/nami_2@2x.png';
+import { howToData } from '@components/templates/top/data/howtoSection';
+import ResponsiveImage from '@components/ui/ResponsiveImage.astro';
+
+import HowToImageContent from './HowToImageContent.astro';
+---
+
+<section class="howto">
+	<h2 class="howto__title">
+		積奏バターサンド
+		<span>3つの美味しい食べ方</span>
+		<div class="howto__title_image">
+			<ResponsiveImage src={Nami} alt="nami" />
+		</div>
+	</h2>
+	<ul>
+		{
+			howToData.map((item, index) => (
+				<li>
+					<HowToImageContent
+						image={item.image}
+						title={item.title}
+						subTitle={item.subTitle}
+						text={item.text}
+						index={index}
+					/>
+				</li>
+			))
+		}
+	</ul>
+</section>
+
+<style is:global lang="scss">
+	@import '@styles/main.scss';
+	.howto {
+		padding: 24vw 6.4vw 39vw 13.4vw;
+		display: flex;
+		flex-direction: column;
+		gap: 24vw;
+		&__title {
+			position: relative;
+			font-size: 20px;
+			letter-spacing: 5px;
+			text-align: center;
+			line-height: 2.5;
+			span {
+				display: block;
+			}
+			&_image {
+				display: flex;
+				margin: 0 auto;
+				width: 100%;
+				max-width: 320px;
+				transform: rotate(4deg);
+			}
+		}
+		ul {
+			display: flex;
+			flex-direction: column;
+			gap: 30vw;
+		}
+		@include mq('md') {
+			padding: 9vw 5.6vw 14vw 5.6vw;
+			gap: 6.7vw;
+			ul {
+				flex-direction: row;
+				gap: 8.3vw;
+				li {
+					width: 100%;
+				}
+			}
+		}
+	}
+</style>
