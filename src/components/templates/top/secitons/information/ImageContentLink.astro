@@ -1,0 +1,70 @@
+---
+import ResponsiveImage from '@components/ui/ResponsiveImage.astro';
+
+import type { TImage } from '../../data/topsection';
+
+type Props = {
+	image: TImage;
+
+	href: string;
+
+	date: string;
+	description: string;
+};
+
+const { image, date, description, href } = Astro.props;
+---
+
+<a class="link" href={href}>
+	<div class="link__image">
+		<ResponsiveImage src={image.src} alt={image.alt} sizes={image.sizes} />
+	</div>
+	<div class="link__content">
+		<p>{date}</p>
+		<p>{description}</p>
+	</div>
+</a>
+
+<style is:global lang="scss">
+	@import '@styles/main.scss';
+	.link {
+		display: flex;
+		flex-direction: column;
+		gap: 30px;
+		&__image {
+			position: relative;
+			img {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				top: 0;
+				left: 0;
+				object-fit: cover;
+				object-position: 50% 50%;
+			}
+			&::before {
+				content: '';
+				display: block;
+				padding-top: 81%;
+			}
+		}
+		&__content {
+			font-size: 14px;
+		}
+		@include mq('md') {
+			flex-direction: row;
+			&__image {
+				gap: 5.7%;
+				img {
+					position: static;
+				}
+				&::before {
+					padding-top: 0;
+				}
+			}
+			&__content {
+				max-width: 200px;
+			}
+		}
+	}
+</style>

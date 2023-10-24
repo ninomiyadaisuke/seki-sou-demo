@@ -1,0 +1,89 @@
+---
+import { informaitonData } from '@components/templates/top/data/informationSection';
+import Title from '@components/ui/Title.astro';
+import ViewMore from '@components/ui/ViewMore.astro';
+
+import ImageContentLink from './ImageContentLink.astro';
+---
+
+<section class="information">
+	<div class="information__container">
+		<div class="information__title">
+			<div class="information__title_text">
+				<p>お知らせ</p>
+			</div>
+			<div>
+				<Title title="information" />
+			</div>
+		</div>
+		<div class="information__link">
+			<ViewMore href="/" />
+		</div>
+	</div>
+	<ul class="information__list">
+		{
+			informaitonData.map(item => (
+				<li>
+					<ImageContentLink
+						image={item.image}
+						href={item.href}
+						date={item.date}
+						description={item.description}
+					/>
+				</li>
+			))
+		}
+	</ul>
+</section>
+
+<style lang="scss">
+	@import '@styles/main.scss';
+	.information {
+		padding: 112px 9.6vw;
+		display: flex;
+		flex-direction: column;
+		gap: 17vw;
+
+		&__title {
+			display: flex;
+			padding-right: 10%;
+			justify-content: space-between;
+			p {
+				font-size: 20px;
+				writing-mode: vertical-rl;
+			}
+		}
+		&__link {
+			display: none;
+		}
+		&__list {
+			display: flex;
+			flex-direction: column;
+			gap: 16vw;
+		}
+		@include mq('md') {
+			gap: 5.7vw;
+			&__container {
+				margin-left: 5.7vw;
+				display: flex;
+				justify-content: space-between;
+			}
+			&__title {
+				position: relative;
+				&_text {
+					position: absolute;
+					left: -60px;
+					top: 0;
+				}
+			}
+			&__link {
+				display: block;
+			}
+			&__list {
+				margin-left: 5.7vw;
+				flex-direction: row;
+				gap: 5.7vw;
+			}
+		}
+	}
+</style>
