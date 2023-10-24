@@ -4,6 +4,12 @@ body {
 	font-family: 'Hina Mincho', sans-serif;
 }
 
-// h1 {
-// 	font-family: 'Shippori Mincho B1';
-// }
+body::selection {
+	background-color: var(--mediumBrown);
+	color: var(--white);
+}
+
+section::selection {
+	background-color: var(--mediumBrown);
+	color: var(--white);
+}
