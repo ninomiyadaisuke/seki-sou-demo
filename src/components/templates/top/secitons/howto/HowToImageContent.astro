@@ -1,0 +1,63 @@
+---
+import ResponsiveImage from '@components/ui/ResponsiveImage.astro';
+
+import type { TImage } from '../../data/topsection';
+
+type Props = {
+	image: TImage;
+	title: string;
+	subTitle?: string;
+	text: string;
+	index: number;
+};
+
+const { image, title, subTitle, text, index } = Astro.props;
+---
+
+<div class="imageContent">
+	<div class="imageContent__title">
+		<span>{`0${index + 1}`}</span>
+		<h3>{title}</h3>
+		{subTitle && <em>{subTitle}</em>}
+	</div>
+	<div>
+		<ResponsiveImage src={image.src} alt={image.alt} sizes={image.sizes} />
+	</div>
+	<p>
+		{text}
+	</p>
+</div>
+
+<style lang="scss">
+	@import '@styles/main.scss';
+	.imageContent {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		gap: 14px;
+		&__title {
+			display: flex;
+			flex-direction: column;
+			gap: 14px;
+			align-items: center;
+			position: absolute;
+			left: -30px;
+			top: -40px;
+			span {
+				letter-spacing: 5px;
+				font-size: 32px;
+			}
+			em,
+			h3 {
+				writing-mode: vertical-rl;
+				letter-spacing: 4px;
+			}
+			h3 {
+				font-size: 20px;
+			}
+		}
+		@include mq('md') {
+			// flex-direction: row;
+		}
+	}
+</style>
