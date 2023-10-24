@@ -72,7 +72,12 @@ const { type, description, imageData, href, imagePosition = 'right' } = Astro.pr
 				max-width: 600px;
 			}
 			&__description {
+				display: flex;
+				flex-direction: column;
 				width: 300px;
+				&_link {
+					align-self: end;
+				}
 			}
 			&.right {
 				flex-direction: row-reverse;
