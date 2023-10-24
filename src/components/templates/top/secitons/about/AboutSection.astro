@@ -1,0 +1,76 @@
+---
+import MainImage from '@assets/images/about/home_about@2x.jpg';
+import SubImage from '@assets/images/about/home_main_6_1@2x.jpg';
+import ResponsiveImage from '@components/ui/ResponsiveImage.astro';
+import Title from '@components/ui/Title.astro';
+---
+
+<section class="about">
+	<div class="about__image">
+		<ResponsiveImage src={MainImage} alt="about" sizes="100vw , 47vw" />
+	</div>
+	<div class="about__content">
+		<Title title="about" />
+		<p class="about__content_catchphrase">
+			海、森、街。
+			<span>絵画の中に溶けていくように</span>
+			<span>記憶の旅先、バターサンド</span>
+		</p>
+		<p class="about__content_description">
+			バターとチーズ。果物、木の実にチョコレート。さまざまな素材を重ね合わせた完成形は絵画のように。冷たいのも、なめらかなのもそれぞれ良く、舌の上にさまざま映り込む、色や香り。誰かを思い出したり、旅に出かけてみたくなったり。漂う雲のように、軽く甘い。季節や景色の広がりを感じていただきたいバターサンドです。
+		</p>
+	</div>
+	<div class="about__image_sub">
+		<ResponsiveImage src={SubImage} alt="about" sizes="100vw , 19vw" />
+	</div>
+</section>
+
+<style lang="scss">
+	@import '@styles/main.scss';
+	.about {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		gap: 32vw;
+		padding-bottom: 32vw;
+		background-color: var(--white);
+		&__content {
+			display: flex;
+			flex-direction: column;
+			gap: 13vw;
+			padding: 0 9.6vw;
+			&_catchphrase {
+				font-size: 18px;
+				letter-spacing: 5px;
+				line-height: 2;
+				span {
+					display: block;
+				}
+			}
+			&_description {
+				font-size: 14px;
+				letter-spacing: 1px;
+				line-height: 2;
+			}
+		}
+		&__image {
+			&_sub {
+				display: none;
+			}
+		}
+		@include mq('md') {
+			flex-direction: row;
+			padding: 11.5vw 0;
+			gap: 7vw;
+			&__image {
+				width: 47%;
+			}
+			&__content {
+				align-self: center;
+				padding: 0;
+				gap: 3.6vw;
+				max-width: 368px;
+			}
+		}
+	}
+</style>
