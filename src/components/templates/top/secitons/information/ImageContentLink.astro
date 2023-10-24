@@ -28,6 +28,11 @@ const { image, date, description, href } = Astro.props;
 <style is:global lang="scss">
 	@import '@styles/main.scss';
 	.link {
+		transition: color 0.3s ease-in-out;
+		&:hover {
+			transition: color 0.3s ease-in-out;
+			color: var(--gray-light-color);
+		}
 		display: flex;
 		flex-direction: column;
 		gap: 30px;
