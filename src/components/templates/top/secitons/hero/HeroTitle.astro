@@ -18,6 +18,7 @@ const data = ['純度の高い', 'なめらかなしあわせ', '親密な温度
 		height: auto;
 		font-size: 3.7333333333vw;
 		writing-mode: vertical-rl;
+		text-orientation: upright;
 		line-height: 1.2;
 		p {
 			margin-left: 4.2vw;
@@ -36,12 +37,6 @@ const data = ['純度の高い', 'なめらかなしあわせ', '親密な温度
 			opacity 0.5s,
 			transform 0.5s;
 	}
-	// .fade-in {
-	// 	@include fadeIn;
-	// }
-	// .side-in {
-	// 	@include sideIn;
-	// }
 	@include mq('md') {
 		h1 {
 			font-size: 1.25vw;
@@ -67,7 +62,6 @@ const data = ['純度の高い', 'なめらかなしあわせ', '親密な温度
 			paragraphs.forEach((paragraph, index) => {
 				// paragraphをHTMLElementとして型付け
 				const styledParagraph = paragraph as HTMLElement;
-
 				setTimeout(() => {
 					styledParagraph.style.opacity = '1';
 					styledParagraph.style.transform = 'translateY(0)';
