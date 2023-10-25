@@ -45,6 +45,8 @@ import ImageContentLink from './ImageContentLink.astro';
 		gap: 17vw;
 
 		&__title {
+			opacity: 0; /* 初期状態を非表示に */
+			transition: opacity 0.5s; /* スムーズな表示のためのトランジション */
 			display: flex;
 			padding-right: 10%;
 			justify-content: space-between;
@@ -60,6 +62,10 @@ import ImageContentLink from './ImageContentLink.astro';
 			display: flex;
 			flex-direction: column;
 			gap: 16vw;
+			li {
+				opacity: 0; /* 初期状態を非表示に */
+				transition: opacity 0.5s; /* スムーズな表示のためのトランジション */
+			}
 		}
 		@include mq('md') {
 			gap: 5.7vw;

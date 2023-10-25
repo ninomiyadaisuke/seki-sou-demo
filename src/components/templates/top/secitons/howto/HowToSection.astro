@@ -67,6 +67,8 @@ import HowToImageContent from './HowToImageContent.astro';
 				flex-direction: row;
 				gap: 8.3vw;
 				li {
+					opacity: 0; /* 初期状態を非表示に */
+					transition: opacity 0.5s; /* スムーズな表示のためのトランジション */
 					width: 100%;
 				}
 			}
