@@ -87,3 +87,11 @@ import ImageContentLink from './ImageContentLink.astro';
 		}
 	}
 </style>
+
+<script>
+	import { animateItems } from '@libs/scripts/animation';
+
+	document.addEventListener('DOMContentLoaded', () => {
+		animateItems('.information__title, .information__list li');
+	});
+</script>

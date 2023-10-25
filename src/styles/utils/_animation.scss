@@ -1,0 +1,167 @@
+/* 上から */
+.fromTopSkew {
+	animation-name: fromTopSkewAnime;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+	transform-origin: center;
+	opacity: 0;
+}
+
+@keyframes fromTopSkewAnime {
+	from {
+		transform: translate3d(0, -2%, 0) skewX(2deg);
+		opacity: 0;
+	}
+
+	to {
+		transform: translate3d(0, 0, 0) skewX(0);
+		opacity: 1;
+	}
+}
+
+/* 右から */
+.fromRightSkew {
+	animation-name: fromRightSkewAnime;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+	transform-origin: center;
+	opacity: 0;
+}
+
+@keyframes fromRightSkewAnime {
+	from {
+		transform: translate3d(2%, 0, 0) skewY(-2deg);
+		opacity: 0;
+	}
+
+	to {
+		transform: translate3d(0, 0, 0) skewY(0);
+		opacity: 1;
+	}
+}
+
+/* 下から */
+.fromBottomSkew {
+	animation-name: fromBottomSkewAnime;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+	transform-origin: center;
+	opacity: 0;
+}
+
+@keyframes fromBottomSkewAnime {
+	from {
+		transform: translate3d(0, 2%, 0) skewX(-2deg);
+		opacity: 0;
+	}
+
+	to {
+		transform: translate3d(0, 0, 0) skewX(0);
+		opacity: 1;
+	}
+}
+
+/* 左から */
+.fromLeftSkew {
+	animation-name: fromLeftSkewAnime;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+	transform-origin: center;
+	opacity: 0;
+}
+
+@keyframes fromLeftSkewAnime {
+	from {
+		transform: translate3d(-2%, 0, 0) skewY(2deg);
+		opacity: 0;
+	}
+
+	to {
+		transform: translate3d(0, 0, 0) skewY(0);
+		opacity: 1;
+	}
+}
+
+/* 右上から */
+.fromTopRightSkew {
+	animation-name: fromTopRightSkewAnime;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+	transform-origin: center;
+	opacity: 0;
+}
+
+@keyframes fromTopRightSkewAnime {
+	from {
+		transform: translate3d(2%, -2%, 0) skewX(2deg) skewY(-2deg);
+		opacity: 0;
+	}
+
+	to {
+		transform: translate3d(0, 0, 0) skewX(0) skewY(0);
+		opacity: 1;
+	}
+}
+
+/* 左上から */
+.fromTopLeftSkew {
+	animation-name: fromTopLeftSkewAnime;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+	transform-origin: center;
+	opacity: 0;
+}
+
+@keyframes fromTopLeftSkewAnime {
+	from {
+		transform: translate3d(-2%, -2%, 0) skewX(2deg) skewY(2deg);
+		opacity: 0;
+	}
+
+	to {
+		transform: translate3d(0, 0, 0) skewX(0) skewY(0);
+		opacity: 1;
+	}
+}
+
+/* 右下から */
+.fromBottomRightSkew {
+	animation-name: fromBottomRightSkewAnime;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+	transform-origin: center;
+	opacity: 0;
+}
+
+@keyframes fromBottomRightSkewAnime {
+	from {
+		transform: translate3d(2%, 2%, 0) skewX(-2deg) skewY(-2deg);
+		opacity: 0;
+	}
+
+	to {
+		transform: translate3d(0, 0, 0) skewX(0) skewY(0);
+		opacity: 1;
+	}
+}
+
+/* 左下から */
+.fromBottomLeftSkew {
+	animation-name: fromBottomLeftSkewAnime;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+	transform-origin: center;
+	opacity: 0;
+}
+
+@keyframes fromBottomLeftSkewAnime {
+	from {
+		transform: translate3d(-2%, 2%, 0) skewX(-2deg) skewY(2deg);
+		opacity: 0;
+	}
+
+	to {
+		transform: translate3d(0, 0, 0) skewX(0) skewY(0);
+		opacity: 1;
+	}
+}

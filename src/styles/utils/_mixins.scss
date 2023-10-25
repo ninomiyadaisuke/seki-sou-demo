@@ -96,3 +96,23 @@ $__breakpoints: (
 		transform: translateX(0);
 	}
 }
+
+.smooth {
+	animation-name: smoothAnime;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+	transform-origin: center;
+	opacity: 0;
+}
+
+@keyframes smoothAnime {
+	from {
+		transform: translate3d(6%, 10%, 0) skew(10deg);
+		opacity: 0;
+	}
+
+	to {
+		transform: translate3d(0, 0, 0) skew(0);
+		opacity: 1;
+	}
+}

@@ -73,3 +73,11 @@ import HowToImageContent from './HowToImageContent.astro';
 		}
 	}
 </style>
+
+<script>
+	import { animateItems } from '@libs/scripts/animation';
+
+	document.addEventListener('DOMContentLoaded', () => {
+		animateItems('.howto li');
+	});
+</script>

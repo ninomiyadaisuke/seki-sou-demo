@@ -35,6 +35,8 @@ import Title from '@components/ui/Title.astro';
 		padding-bottom: 32vw;
 		background-color: var(--white);
 		&__content {
+			opacity: 0; /* 初期状態を非表示に */
+			transition: opacity 0.5s; /* スムーズな表示のためのトランジション */
 			display: flex;
 			flex-direction: column;
 			gap: 13vw;
@@ -54,6 +56,8 @@ import Title from '@components/ui/Title.astro';
 			}
 		}
 		&__image {
+			opacity: 0; /* 初期状態を非表示に */
+			transition: opacity 0.5s; /* スムーズな表示のためのトランジション */
 			&_sub {
 				display: none;
 			}
@@ -74,3 +78,11 @@ import Title from '@components/ui/Title.astro';
 		}
 	}
 </style>
+
+<script>
+	import { animateItems } from '@libs/scripts/animation';
+
+	document.addEventListener('DOMContentLoaded', () => {
+		animateItems('.about__content, .about__image');
+	});
+</script>

@@ -85,3 +85,11 @@ const { type, description, imageData, href, imagePosition = 'right' } = Astro.pr
 		}
 	}
 </style>
+
+<script>
+	import { animateItems } from '@libs/scripts/animation';
+
+	document.addEventListener('DOMContentLoaded', () => {
+		animateItems('.item__image, .item__description p, .item__description_link');
+	});
+</script>
