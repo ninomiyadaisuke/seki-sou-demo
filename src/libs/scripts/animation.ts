@@ -26,7 +26,7 @@ export function animateItems(targetClass: string) {
 	const options = {
 		root: null,
 		rootMargin: '0px',
-		threshold: 0.2
+		threshold: 0.1
 	};
 
 	const observer = new IntersectionObserver(entries => {
@@ -54,9 +54,3 @@ export function animateItems(targetClass: string) {
 		observer.observe(item);
 	});
 }
-
-document.addEventListener('DOMContentLoaded', () => {
-	animateItems('.about__image, .about__content');
-	// 他のクラスを監視する場合は以下のように呼び出せます
-	// animateItems('.anotherClass');
-});

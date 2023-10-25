@@ -9,7 +9,7 @@
 
 @keyframes fromTopSkewAnime {
 	from {
-		transform: translate3d(0, -5%, 0) skewX(10deg);
+		transform: translate3d(0, -2%, 0) skewX(2deg);
 		opacity: 0;
 	}
 
@@ -30,7 +30,7 @@
 
 @keyframes fromRightSkewAnime {
 	from {
-		transform: translate3d(5%, 0, 0) skewY(-10deg);
+		transform: translate3d(2%, 0, 0) skewY(-2deg);
 		opacity: 0;
 	}
 
@@ -51,7 +51,7 @@
 
 @keyframes fromBottomSkewAnime {
 	from {
-		transform: translate3d(0, 5%, 0) skewX(-10deg);
+		transform: translate3d(0, 2%, 0) skewX(-2deg);
 		opacity: 0;
 	}
 
@@ -72,7 +72,7 @@
 
 @keyframes fromLeftSkewAnime {
 	from {
-		transform: translate3d(-5%, 0, 0) skewY(10deg);
+		transform: translate3d(-2%, 0, 0) skewY(2deg);
 		opacity: 0;
 	}
 
@@ -93,7 +93,7 @@
 
 @keyframes fromTopRightSkewAnime {
 	from {
-		transform: translate3d(5%, -5%, 0) skewX(10deg) skewY(-10deg);
+		transform: translate3d(2%, -2%, 0) skewX(2deg) skewY(-2deg);
 		opacity: 0;
 	}
 
@@ -114,7 +114,7 @@
 
 @keyframes fromTopLeftSkewAnime {
 	from {
-		transform: translate3d(-5%, -5%, 0) skewX(10deg) skewY(10deg);
+		transform: translate3d(-2%, -2%, 0) skewX(2deg) skewY(2deg);
 		opacity: 0;
 	}
 
@@ -135,7 +135,7 @@
 
 @keyframes fromBottomRightSkewAnime {
 	from {
-		transform: translate3d(5%, 5%, 0) skewX(-10deg) skewY(-10deg);
+		transform: translate3d(2%, 2%, 0) skewX(-2deg) skewY(-2deg);
 		opacity: 0;
 	}
 
@@ -156,7 +156,7 @@
 
 @keyframes fromBottomLeftSkewAnime {
 	from {
-		transform: translate3d(-5%, 5%, 0) skewX(-10deg) skewY(10deg);
+		transform: translate3d(-2%, 2%, 0) skewX(-2deg) skewY(2deg);
 		opacity: 0;
 	}
 
