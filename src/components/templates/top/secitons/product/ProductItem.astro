@@ -42,6 +42,8 @@ const { type, description, imageData, href, imagePosition = 'right' } = Astro.pr
 		gap: 30px;
 		&__image {
 			position: relative;
+			opacity: 0; /* 初期状態を非表示に */
+			transition: opacity 0.5s; /* スムーズな表示のためのトランジション */
 			h3 {
 				position: absolute;
 				font-size: 20px;
@@ -55,7 +57,13 @@ const { type, description, imageData, href, imagePosition = 'right' } = Astro.pr
 			align-self: center;
 			font-size: 14px;
 			width: auto;
+			p {
+				opacity: 0; /* 初期状態を非表示に */
+				transition: opacity 0.5s; /* スムーズな表示のためのトランジション */
+			}
 			&_link {
+				opacity: 0; /* 初期状態を非表示に */
+				transition: opacity 0.5s; /* スムーズな表示のためのトランジション */
 				margin-top: 30px;
 				text-align: end;
 			}
