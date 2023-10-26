@@ -30,6 +30,14 @@
 	src: url('/fonts/shippori-kanzi2.woff2') format('woff2');
 }
 
+@font-face {
+	font-display: swap;
+	font-family: 'Shippori Mincho';
+	font-style: normal;
+	font-weight: 400;
+	src: url('/fonts/shippori-kanzi2.woff3') format('woff2');
+}
+
 // @font-face {
 // 	font-display: swap;
 // 	font-family: 'Shippori Mincho';
