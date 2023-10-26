@@ -1,48 +1,119 @@
-/* hina-mincho-regular - latin */
 @font-face {
-	font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	font-display: swap;
 	font-family: 'Hina Mincho';
 	font-style: normal;
 	font-weight: 400;
-	src: url('/fonts/hina-mincho-v12-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+	src: url('/fonts/hina-mincho-v12-latin-regular.woff2') format('woff2');
 }
 
 @font-face {
-	font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	font-display: swap;
 	font-family: 'Shippori Mincho';
 	font-style: normal;
 	font-weight: 400;
-	src: url('/fonts/shippori-eigo.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+	src: url('/fonts/shippori-eigo.woff2') format('woff2');
 }
 
 @font-face {
-	font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	font-display: swap;
 	font-family: 'Shippori Mincho';
 	font-style: normal;
 	font-weight: 400;
-	src: url('/fonts/shippori-hiragana.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-
-// @font-face {
-// 	font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-// 	font-family: 'Shippori Mincho';
-// 	font-style: normal;
-// 	font-weight: 400;
-// 	src: url('/fonts/shippori-kanzi.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-// }
-
-@font-face {
-	font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-	font-family: 'Shippori Mincho';
-	font-style: normal;
-	font-weight: 400;
-	src: url('/fonts/shippori-katakana.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+	src: url('/fonts/shippori-hiragana.woff2') format('woff2');
 }
 
 @font-face {
-	font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	font-display: swap;
 	font-family: 'Shippori Mincho';
 	font-style: normal;
 	font-weight: 400;
-	src: url('/fonts/shippori-kigou.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+	src: url('/fonts/shippori-katakana.woff2') format('woff2');
+}
+
+@font-face {
+	font-display: swap;
+	font-family: 'Shippori Mincho';
+	font-style: normal;
+	font-weight: 400;
+	src: url('/fonts/shippori-kigou.woff2') format('woff2');
+}
+
+@font-face {
+	font-display: swap;
+	font-family: 'Shippori Mincho';
+	font-style: normal;
+	font-weight: 400;
+	src: url('/fonts/woff2-kanzi/kanzi-1.woff2') format('woff2');
+}
+
+@font-face {
+	font-display: swap;
+	font-family: 'Shippori Mincho';
+	font-style: normal;
+	font-weight: 400;
+	src: url('/fonts/woff2-kanzi/kanzi-2.woff2') format('woff2');
+}
+
+@font-face {
+	font-display: swap;
+	font-family: 'Shippori Mincho';
+	font-style: normal;
+	font-weight: 400;
+	src: url('/fonts/woff2-kanzi/kanzi-3.woff2') format('woff2');
+}
+
+@font-face {
+	font-display: swap;
+	font-family: 'Shippori Mincho';
+	font-style: normal;
+	font-weight: 400;
+	src: url('/fonts/woff2-kanzi/kanzi-4.woff2') format('woff2');
+}
+
+@font-face {
+	font-display: swap;
+	font-family: 'Shippori Mincho';
+	font-style: normal;
+	font-weight: 400;
+	src: url('/fonts/woff2-kanzi/kanzi-5.woff2') format('woff2');
+}
+
+@font-face {
+	font-display: swap;
+	font-family: 'Shippori Mincho';
+	font-style: normal;
+	font-weight: 400;
+	src: url('/fonts/woff2-kanzi/kanzi-6.woff2') format('woff2');
+}
+
+@font-face {
+	font-display: swap;
+	font-family: 'Shippori Mincho';
+	font-style: normal;
+	font-weight: 400;
+	src: url('/fonts/woff2-kanzi/kanzi-7.woff2') format('woff2');
+}
+
+@font-face {
+	font-display: swap;
+	font-family: 'Shippori Mincho';
+	font-style: normal;
+	font-weight: 400;
+	src: url('/fonts/woff2-kanzi/kanzi-8.woff2') format('woff2');
+}
+
+@font-face {
+	font-display: swap;
+	font-family: 'Shippori Mincho';
+	font-style: normal;
+	font-weight: 400;
+	src: url('/fonts/woff2-kanzi/kanzi-9.woff2') format('woff2');
+}
+
+@font-face {
+	font-display: swap;
+	font-family: 'Shippori Mincho';
+	font-style: normal;
+	font-weight: 400;
+	src: url('/fonts/woff2-kanzi/kanzi-10.woff2') format('woff2');
 }
