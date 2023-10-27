@@ -2,14 +2,15 @@
 const data = ['純度の高い', 'なめらかなしあわせ', '親密な温度の', 'バタ|サンド'];
 ---
 
-<h1>
+<h1 class="title">
 	{data.map(item => <p>{item}</p>)}
 </h1>
 
 <style is:global lang="scss">
 	@import '@styles/main.scss';
 
-	h1 {
+	.title {
+		font-weight: 800;
 		position: absolute;
 		right: 7.4666666667vw;
 		top: 150.9333333333vw;
