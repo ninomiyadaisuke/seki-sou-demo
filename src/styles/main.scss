@@ -9,7 +9,7 @@ body::selection {
 	color: var(--white);
 }
 
-section::selection {
-	background-color: var(--mediumBrown);
-	color: var(--white);
+h1 {
+	font-family: 'Shippori Mincho';
+	font-weight: 800;
 }
