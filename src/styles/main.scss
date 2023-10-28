@@ -9,7 +9,7 @@ body::selection {
 	color: var(--white);
 }
 
-// h1 {
-// 	font-family: 'Shippori Mincho', sans-serif;
-// 	font-weight: 800;
-// }
+section {
+	content-visibility: auto;
+	height: auto;
+}
