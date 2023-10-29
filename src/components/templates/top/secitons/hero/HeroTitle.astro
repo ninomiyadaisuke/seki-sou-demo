@@ -2,14 +2,14 @@
 const data = ['純度の高い', 'なめらかなしあわせ', '親密な温度の', 'バタ|サンド'];
 ---
 
-<h1 class="title">
+<h1>
 	{data.map(item => <p>{item}</p>)}
 </h1>
 
 <style is:global lang="scss">
 	@import '@styles/main.scss';
 
-	.title {
+	h1 {
 		position: absolute;
 		right: 7.4666666667vw;
 		top: 150.9333333333vw;
@@ -31,7 +31,7 @@ const data = ['純度の高い', 'なめらかなしあわせ', '親密な温度
 		}
 	}
 
-	.title p {
+	h1 p {
 		opacity: 0;
 		transform: translateY(-1em) translateX(-1em); // 斜め上からの移動
 		transition:
@@ -39,7 +39,7 @@ const data = ['純度の高い', 'なめらかなしあわせ', '親密な温度
 			transform 0.5s;
 	}
 	@include mq('md') {
-		.title {
+		h1 {
 			font-size: 1.25vw;
 			right: 18.75vw;
 			top: 23.4375vw;
