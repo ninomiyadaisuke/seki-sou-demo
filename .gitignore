@@ -19,3 +19,5 @@ pnpm-debug.log*
 .env.local
 # macOS-specific files
 .DS_Store
+
+.vercel
